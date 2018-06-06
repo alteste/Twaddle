@@ -13,6 +13,7 @@
 		1A0C53DF20C78DF40037B6C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0C53DE20C78DF40037B6C9 /* Assets.xcassets */; };
 		1A0C53E220C78DF40037B6C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0C53E020C78DF40037B6C9 /* LaunchScreen.storyboard */; };
 		1A0C53ED20C78DF40037B6C9 /* TwaddleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C53EC20C78DF40037B6C9 /* TwaddleTests.swift */; };
+		1A0C53FA20C792AA0037B6C9 /* locationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C53F920C792AA0037B6C9 /* locationData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		1A0C53E820C78DF40037B6C9 /* TwaddleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwaddleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0C53EC20C78DF40037B6C9 /* TwaddleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwaddleTests.swift; sourceTree = "<group>"; };
 		1A0C53EE20C78DF40037B6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A0C53F920C792AA0037B6C9 /* locationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,9 @@
 		1A0C53D620C78DF40037B6C9 /* Twaddle */ = {
 			isa = PBXGroup;
 			children = (
+				1A0C53F820C792700037B6C9 /* Controller */,
+				1A0C53F720C792680037B6C9 /* Model */,
 				1A0C53D720C78DF40037B6C9 /* AppDelegate.swift */,
-				1A0C53D920C78DF40037B6C9 /* ViewController.swift */,
 				1A0C53DB20C78DF40037B6C9 /* Main.storyboard */,
 				1A0C53DE20C78DF40037B6C9 /* Assets.xcassets */,
 				1A0C53E020C78DF40037B6C9 /* LaunchScreen.storyboard */,
@@ -94,6 +97,22 @@
 				1A0C53EE20C78DF40037B6C9 /* Info.plist */,
 			);
 			path = TwaddleTests;
+			sourceTree = "<group>";
+		};
+		1A0C53F720C792680037B6C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A0C53F920C792AA0037B6C9 /* locationData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A0C53F820C792700037B6C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A0C53D920C78DF40037B6C9 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0C53FA20C792AA0037B6C9 /* locationData.swift in Sources */,
 				1A0C53DA20C78DF40037B6C9 /* ViewController.swift in Sources */,
 				1A0C53D820C78DF40037B6C9 /* AppDelegate.swift in Sources */,
 			);
