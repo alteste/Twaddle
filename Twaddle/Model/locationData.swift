@@ -9,6 +9,10 @@
 import Foundation
 import MapKit
 
-
+class getLocationData {
+    
+    
+    
+}
 
 

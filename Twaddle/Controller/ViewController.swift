@@ -12,13 +12,19 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var locationLbl: UILabel!
+    @IBOutlet weak var btn: UIButton!
+    
     let locationManager = CLLocationManager()
     
     var lat: Double  = 0
     var long: Double = 0
+    var locationName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateLocationUI()
         
         locationManager.requestWhenInUseAuthorization()
         
@@ -37,8 +43,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             long = location.coordinate.longitude
         }
         
-        
-        
         let geoCoder = CLGeocoder()
         let coordinates = CLLocation(latitude: Double(lat), longitude: Double(long))
         geoCoder.reverseGeocodeLocation(coordinates, completionHandler: { (placemarks, error) -> Void in
@@ -49,11 +53,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             // Location name
             if let coordinatesName = placeMark.locality  {
-                print(coordinatesName)
+                self.locationName = coordinatesName
             } else {
                 print("nope")
             }
         })
+        
+    }
+    
+    func updateLocationUI() {
+        locationLbl.text = locationName
+        print(locationName)
+    }
+    
+    @IBAction func wowbtn(_ sender: Any) {
+        
+        updateLocationUI()
         
     }
     
